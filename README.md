@@ -1,55 +1,30 @@
-# LRU_Cache
-LRU Cache – Java Implementation
+🚀 LRU Cache – Java Implementation
 
-A clean and efficient implementation of an LRU (Least Recently Used) Cache using a HashMap and a Doubly Linked List in Java.
-This project is built using Maven, follows O(1) time complexity for both get() and put() operations, and reflects production-style LRU behavior.
+A clean and efficient implementation of an LRU (Least Recently Used) Cache using HashMap and a Doubly Linked List in Java.
+Built using Maven, this project achieves O(1) time complexity for both get() and put() operations and follows real-world cache design principles.
 
-📌 Features
+✨ Features
 
-O(1) get and put operations using HashMap + Doubly Linked List
+🔹 O(1) get & put operations
 
-Automatic eviction of least recently used elements when capacity is full
+🔹 Automatic eviction of Least Recently Used items
 
-Clean separation of logic (Node, DLL, LRUCache)
+🔹 Uses HashMap + Doubly Linked List internally
 
-Simple to integrate into larger systems
+🔹 Clean, modular class design
 
-Maven project structure for easy build and testing
+🔹 Follows production-style cache behavior
 
-🧠 How LRU Cache Works
+🔹 Simple to run and easy to integrate
 
-An LRU Cache removes the least recently accessed entry when capacity is exceeded.
+🧠 How the LRU Cache Works
+This LRU cache tracks usage order with a Doubly Linked List (DLL) and stores references in a HashMap.
 
-This implementation uses:
+------------------------------------------------------------------------------------------------------------------------------
+🔮 Future Improvements
 
-HashMap <key, node> for O(1) search
+Generic Support: LRUCache<K, V>
 
-Doubly Linked List to track usage order
+Thread-safe Variant using ReentrantLock
 
-Head = Most Recently Used
-
-Tail = Least Recently Used
-
-When a key is accessed:
-
-Move node to the head
-
-On insertion:
-
-If full → remove tail
-
-Insert new node at head
-
-This keeps operations fast and predictable.
-
-📁 Project Structure
-LRU_Cache/
-│
-├── src/
-│   └── main/java/com/lru/
-│       ├── DLLNode.java
-│       ├── DoublyLinkedList.java
-│       └── LRUCache.java
-│
-├── pom.xml
-└── README.md
+Cache Metrics (hits, misses, evictions)
